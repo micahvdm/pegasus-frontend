@@ -55,6 +55,8 @@
         <file>menu/settings/common/SectionTitle.qml</file>
         <file>menu/settings/common/SimpleButton.qml</file>
         <file>menu/settings/common/Switch.qml</file>
+        <file>menu/settings/common/SimpleSlider.qml</file>
+        <file>menu/settings/common/SliderOption.qml</file>
         <file>menu/settings/common/ToggleOption.qml</file>
         <file>menu/settings/common/ReloadQuestion.qml</file>
         <file>menu/settings/gamedireditor/FilePicker.qml</file>

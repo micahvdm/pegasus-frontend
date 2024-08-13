@@ -90,6 +90,46 @@ void register_api_classes()
     qqsfpm::registerQQmlSortFilterProxyModelTypes();
 }
 
+int get_default_sink_volume()
+{
+	QProcess process;
+	process.start("/bin/bash", QStringList() << "-c"
+		                                     << "pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\\d+(?=%)' | head -n 1");
+	process.waitForFinished();
+
+	return process.readAllStandardOutput().toInt();
+}
+
+void increase_volume()
+{
+	if (get_default_sink_volume() >= 100)
+	{
+		QProcess::execute("/usr/bin/pactl", QStringList() << "set-sink-volume" << "@DEFAULT_SINK@" << "100%");
+	}
+	else
+	{
+		QProcess::execute("/usr/bin/pactl", QStringList() << "set-sink-volume" << "@DEFAULT_SINK@" << "+10%");
+	}
+}
+
+void decrease_volume()
+{
+	QProcess::execute("/usr/bin/pactl", QStringList() << "set-sink-volume" << "@DEFAULT_SINK@" << "-10%");
+}
+
+void on_volume_change(VolumeChangeType type)
+{
+	switch (type)
+	{
+		case VolumeChangeType::UP:
+			increase_volume();
+			break;
+		case VolumeChangeType::DOWN:
+			decrease_volume();
+			break;
+	}
+}
+
 void on_app_close(AppCloseType type)
 {
     if (type == AppCloseType::SUSPEND) {
