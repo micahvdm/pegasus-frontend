@@ -1,6 +1,6 @@
 TEMPLATE = lib
 
-QT += qml quick
+QT += qml quick core
 LIBS += -lNetworkManagerQt
 CONFIG += c++11 staticlib warn_on exceptions_off rtti_off qtquickcompiler
 DEFINES *= $${COMMON_DEFINES}
@@ -11,7 +11,7 @@ RESOURCES += \
     ../themes/themes.qrc
 
 SOURCES += \
-           menu/settings/connectivity/NetworkManager.cpp
+    menu/settings/connectivity/NetworkManager.cpp
 
 HEADERS += \
     menu/settings/connectivity/NetworkManager.h

@@ -13,7 +13,7 @@ void NetworkManager::scanNetworks() {
 
 void NetworkManager::connectToNetwork(const QString &networkName, const QString &password) {
     // Build nmcli command
-    QString command = QString("nmcli dev wifi connect '%1' password '%2'").arg(networkName, password);
+    QString command = QString("sudo nmcli dev wifi connect '%1' password '%2'").arg(networkName, password);
 
     // Execute command
     QProcess process;

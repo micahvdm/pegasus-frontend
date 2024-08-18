@@ -68,6 +68,7 @@ ApplicationWindow {
 
         onAccepted: {
             networkManager.connectToNetwork(networkName, password)
+            root.close()
         }
 
         ColumnLayout {
