@@ -26,6 +26,7 @@
 #include <QIcon>
 #include <QSettings>
 #include <QtPlugin>
+#include <QQmlEngine>
 
 #ifdef Q_OS_ANDROID
 #include "backend/platform/AndroidHelpers.h"
