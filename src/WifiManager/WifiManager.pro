@@ -9,3 +9,8 @@ SOURCES += \
 
 HEADERS += \
            WifiManager.h
+
+target.path = /usr/bin
+qmlpath.path = /usr/share/WifiManager
+
+INSTALLS += target qmlpath
