@@ -17,7 +17,7 @@ void NetworkManager::connectToNetwork(const QString &networkName, const QString 
 
     // Execute command
     QProcess process;
-    process.start(command);
+    process.start("sh", QStringList() << "-c" << command);
     process.waitForFinished();
     QByteArray result = process.readAllStandardOutput();
     qDebug() << "nmcli output:" << result;
@@ -37,7 +37,7 @@ void NetworkManager::parseAvailableNetworks() {
 
 void NetworkManager::runCommand(const QString &command, QStringList &output) {
     QProcess process;
-    process.start(command);
+    process.start("sh", QStringList() << "-c" << command);
     process.waitForFinished();
     QByteArray result = process.readAllStandardOutput();
     output = QString(result).split('\n', QString::SkipEmptyParts);
