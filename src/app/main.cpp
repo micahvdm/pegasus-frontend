@@ -37,8 +37,8 @@
 Q_IMPORT_PLUGIN(ApngImagePlugin)
 #endif
 
-int WifiManager::unused_val = qmlRegisterType<WifiManager>("WifiManager", 1, 0, "WifiManager");
-//qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
+//int WifiManager::unused_val = qmlRegisterType<WifiManager>("WifiManager", 1, 0, "WifiManager");
+qmlRegisterType<WifiManager::WifiManager>("WifiManager", 1, 0, "WifiManager");
 
 backend::CliArgs handle_cli_args(QGuiApplication&);
 bool request_runtime_permissions();

@@ -1,6 +1,3 @@
-#ifndef NETWORKMANAGER_H
-#define NETWORKMANAGER_H
-
 #include <QObject>
 #include <QStringList>
 
@@ -22,4 +19,3 @@ private:
     static int unused_val;
 };
 
-#endif // NETWORKMANAGER_H
