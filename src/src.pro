@@ -4,6 +4,6 @@ SUBDIRS += \
     app \
     backend \
     frontend \
-    NetworkManager
+    WifiManager
 
 app.depends = backend frontend

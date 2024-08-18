@@ -4,10 +4,10 @@
 #include <QObject>
 #include <QStringList>
 
-class NetworkManager : public QObject {
+class WifiManager : public QObject {
     Q_OBJECT
 public:
-    explicit NetworkManager(QObject *parent = nullptr);
+    explicit WifiManager(QObject *parent = nullptr);
 
     Q_INVOKABLE void scanNetworks();
     Q_INVOKABLE void connectToNetwork(const QString &networkName, const QString &password);

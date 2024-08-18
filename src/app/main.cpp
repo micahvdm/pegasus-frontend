@@ -18,7 +18,7 @@
 #include "backend/Backend.h"
 #include "backend/Paths.h"
 #include "backend/platform/TerminalKbd.h"
-#include "NetworkManager/NetworkManager.h"
+#include "NetworkManager/WifiManager.h"
 
 #include <QCommandLineParser>
 #include <QFileInfo>
@@ -37,7 +37,7 @@
 Q_IMPORT_PLUGIN(ApngImagePlugin)
 #endif
 
-int NetworkManager::unused_val = qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
+int WifiManager::unused_val = qmlRegisterType<WifiManager>("WifiManager", 1, 0, "WifiManager");
 //qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
 
 backend::CliArgs handle_cli_args(QGuiApplication&);

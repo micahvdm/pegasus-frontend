@@ -1,11 +1,11 @@
 TEMPLATE = lib
 QT += qml quick core
-TARGET = NetworkManager
+TARGET = WifiManager
 CONFIG += plugin c++11 staticlib warn_on exceptions_off rtti_off qtquickcompiler
 DEFINES *= $${COMMON_DEFINES}
 
 SOURCES += \
-           NetworkManager.cpp
+           WifiManager.cpp
 
 HEADERS += \
-           NetworkManager.h
+           WifiManager.h

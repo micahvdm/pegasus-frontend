@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Dialogs 1.2
 import "common"
 import "qrc:/qmlutils" as PegasusUtils
-import NetworkManager 1.0
+import WifiManager 1.0
 
 FocusScope {
     id: root
@@ -39,8 +39,8 @@ FocusScope {
         z: 2
     }
 
-    NetworkManager {
-        id: networkManager
+    WifiManager {
+        id: wifiManager
         onNetworksAvailable: {
             networkListView.model = networks
         }
@@ -83,7 +83,7 @@ FocusScope {
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
         onClicked: {
-            networkManager.scanNetworks()
+            wifiManager.scanNetworks()
         }
     }
 
@@ -97,7 +97,7 @@ FocusScope {
         property string password: ""
 
         onAccepted: {
-            networkManager.connectToNetwork(networkName, password)
+            wifiManager.connectToNetwork(networkName, password)
             root.close()
         }
 
