@@ -92,9 +92,9 @@ FocusScope {
         SettingsEntry {
             label: QT_TR_NOOP("Volume Control")
             type: SettingsEntry.Type.Slider
-            sliderValue: Internal.settings.autobootTimeout
-            sliderSetter: (val) => {
-                return Internal.settings.autobootTimeout = val;
+            //sliderValue: Internal.settings.autobootTimeout
+            //sliderSetter: (val) => {
+            //    return Internal.settings.autobootTimeout = val;
             }
             section: "general"
         },

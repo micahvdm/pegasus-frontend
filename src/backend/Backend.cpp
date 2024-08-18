@@ -117,18 +117,18 @@ void decrease_volume()
 	QProcess::execute("/usr/bin/pactl", QStringList() << "set-sink-volume" << "@DEFAULT_SINK@" << "-10%");
 }
 
-void on_volume_change(VolumeChangeType type)
-{
-	switch (type)
-	{
-		case VolumeChangeType::UP:
-			increase_volume();
-			break;
-		case VolumeChangeType::DOWN:
-			decrease_volume();
-			break;
-	}
-}
+// void on_volume_change(VolumeChangeType type)
+// {
+// 	switch (type)
+// 	{
+// 		case VolumeChangeType::UP:
+// 			increase_volume();
+// 			break;
+// 		case VolumeChangeType::DOWN:
+// 			decrease_volume();
+// 			break;
+// 	}
+// }
 
 void on_app_close(AppCloseType type)
 {
