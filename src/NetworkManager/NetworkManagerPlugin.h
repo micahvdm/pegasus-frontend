@@ -3,12 +3,14 @@
 
 #include <QQmlExtensionPlugin>
 
-class NetworkManagerPlugin : public QQmlExtensionPlugin {
+class NetworkManagerPlugin : public QObject
+{
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
-
 public:
-    void registerTypes(const char *uri) override;
+    NetworkManagerPlugin(QObject *parent = 0);
+
+private:
+    static int unused_val;
 };
 
 #endif // NETWORKMANAGERPLUGIN_H
