@@ -18,7 +18,7 @@
 #include "backend/Backend.h"
 #include "backend/Paths.h"
 #include "backend/platform/TerminalKbd.h"
-#include "NetworkManager/WifiManager.h"
+#include "WifiManager/WifiManager.h"
 
 #include <QCommandLineParser>
 #include <QFileInfo>
