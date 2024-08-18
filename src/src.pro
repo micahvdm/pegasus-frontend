@@ -3,6 +3,7 @@ TEMPLATE = subdirs
 SUBDIRS += \
     app \
     backend \
-    frontend
+    frontend \
+    NetworkManager
 
 app.depends = backend frontend

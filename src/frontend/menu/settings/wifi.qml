@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Dialogs 1.2
 import "common"
 import "qrc:/qmlutils" as PegasusUtils
-import "/connectivity/NetworkManager.h"
+import NetworkManager 1.0
 
 FocusScope {
     id: root
