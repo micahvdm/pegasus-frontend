@@ -89,15 +89,15 @@ FocusScope {
             boolSetter: (val) => Internal.settings.fullscreen = val
             section: "general"
         },
-        SettingsEntry {
-            label: QT_TR_NOOP("Volume Control")
-            type: SettingsEntry.Type.Slider
-            //sliderValue: Internal.settings.autobootTimeout
-            //sliderSetter: (val) => {
-            //    return Internal.settings.autobootTimeout = val;
-            }
-            section: "general"
-        },
+        // SettingsEntry {
+        //     label: QT_TR_NOOP("Volume Control")
+        //     type: SettingsEntry.Type.Slider
+        //     //sliderValue: Internal.settings.autobootTimeout
+        //     //sliderSetter: (val) => {
+        //     //    return Internal.settings.autobootTimeout = val;
+        //     }
+        //     section: "general"
+        // },
         SettingsEntry {
             label: QT_TR_NOOP("WiFi Settings")
             type: SettingsEntry.Type.Button
