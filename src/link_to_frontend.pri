@@ -9,3 +9,11 @@ else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += "$${TOP_BUILDDIR}
 else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += "$${TOP_BUILDDIR}/src/frontend/release/frontend.lib"
 else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += "$${TOP_BUILDDIR}/src/frontend/debug/frontend.lib"
 else:unix: PRE_TARGETDEPS += "$${TOP_BUILDDIR}/src/frontend/libfrontend.a"
+
+LIBS += -lNetworkManager
+INCLUDEPATH += \
+    "$${TOP_SRCDIR}/src" \
+    "$${TOP_SRCDIR}/src/NetworkManager" \
+    "$${TOP_SRCDIR}/thirdparty"
+DEPENDPATH += \
+    "$${TOP_SRCDIR}/src/NetworkManager" \

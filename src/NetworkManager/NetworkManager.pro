@@ -10,4 +10,4 @@ SOURCES += NetworkManagerPlugin.cpp \
 HEADERS += NetworkManagerPlugin.h \
            NetworkManager.h
 
-DESTDIR = $$PWD/plugins
+DESTDIR = /usr/lib/qt/qml/
