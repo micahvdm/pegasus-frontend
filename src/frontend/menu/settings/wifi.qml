@@ -104,7 +104,7 @@ ApplicationWindow {
 
         ColumnLayout {
             Text {
-                text: "SSID: " + selectedNetwork?.ssid
+                text: "SSID: " + selectedNetwork.ssid
                 Layout.fillWidth: true
             }
 
