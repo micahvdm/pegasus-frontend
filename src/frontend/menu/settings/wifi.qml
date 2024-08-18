@@ -1,13 +1,42 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Dialogs 1.3
-import "connectivity"
+import "common"
+import "qrc:/qmlutils" as PegasusUtils 
 
-ApplicationWindow {
-    visible: true
-    width: 640
-    height: 480
-    title: "Network Manager"
+FocusScope {
+    id: root
+
+    signal close
+
+    anchors.fill: parent
+    enabled: focus
+    visible: 0 < (x + width) && x < Window.window.width
+
+    Keys.onPressed: {
+        if (api.keys.isCancel(event) && !event.isAutoRepeat) {
+            event.accepted = true;
+            root.close();
+        }
+    }
+
+
+    PegasusUtils.HorizontalSwipeArea {
+        anchors.fill: parent
+        onSwipeRight: root.close()
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.RightButton
+        onClicked: root.close()
+    }
+
+    ScreenHeader {
+        id: header
+        text: qsTr("Settings > WiFi Settings") + api.tr
+        z: 2
+    }
 
     NetworkManager {
         id: networkManager
