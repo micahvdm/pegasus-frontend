@@ -9,3 +9,5 @@ SOURCES += NetworkManagerPlugin.cpp \
 
 HEADERS += NetworkManagerPlugin.h \
            NetworkManager.h
+
+DESTDIR = lib/plugins
