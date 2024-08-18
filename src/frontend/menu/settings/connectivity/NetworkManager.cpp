@@ -12,5 +12,5 @@ void NetworkManager::scanNetworks() {
 
 void NetworkManager::connectToNetwork(const QString &networkName) {
     // Simulate connecting to a network
-    qDebug() << "Connecting to network:" << networkName;
+    //qDebug() << "Connecting to network:" << networkName;
 }
