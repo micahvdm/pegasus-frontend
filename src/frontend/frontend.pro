@@ -11,8 +11,8 @@ RESOURCES += \
     ../themes/themes.qrc
 
 SOURCES += \
-    ./connectivity/networkmanagerbackend.cpp
+    /menu/settings/connectivity/networkmanagerbackend.cpp
 
 HEADERS += \
-    ./connectivity/networkmanagerbackend.h
+    /menu/settings/connectivity/networkmanagerbackend.h
 
