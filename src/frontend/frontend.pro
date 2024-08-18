@@ -1,6 +1,7 @@
 TEMPLATE = lib
 
-QT += qml quick networkmanager-qt
+QT += qml quick
+LIBS += -lKF5NetworkManagerQt
 CONFIG += c++11 staticlib warn_on exceptions_off rtti_off qtquickcompiler
 DEFINES *= $${COMMON_DEFINES}
 
