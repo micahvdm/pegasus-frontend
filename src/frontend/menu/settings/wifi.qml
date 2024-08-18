@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import com.example.networkmanager 1.0
+import QtQuick.Dialogs 1.3
+import "connectivity"
 
 ApplicationWindow {
     visible: true
@@ -18,7 +19,7 @@ ApplicationWindow {
     ListView {
         id: networkListView
         width: parent.width
-        height: parent.height - connectButton.height - 10
+        height: parent.height - connectButton.height - 50
         model: ListModel {}
         delegate: Item {
             width: parent.width
@@ -38,7 +39,8 @@ ApplicationWindow {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        networkManager.connectToNetwork(model.networkName)
+                        selectedNetwork = model.networkName
+                        passwordDialog.open()
                     }
                 }
             }
@@ -54,4 +56,38 @@ ApplicationWindow {
             networkManager.scanNetworks()
         }
     }
+
+    // Password input dialog
+    Dialog {
+        id: passwordDialog
+        title: "Enter Password"
+        standardButtons: DialogOk | DialogCancel
+
+        property string networkName: ""
+        property string password: ""
+
+        onAccepted: {
+            networkManager.connectToNetwork(networkName, password)
+        }
+
+        ColumnLayout {
+            spacing: 10
+
+            Label {
+                text: "Enter password for " + networkName
+            }
+
+            TextField {
+                id: passwordField
+                placeholderText: "Password"
+                echoMode: TextInput.Password
+                Layout.fillWidth: true
+                text: password
+                onTextChanged: password = text
+            }
+        }
+    }
+
+    // Variable to store selected network
+    property string selectedNetwork: ""
 }
