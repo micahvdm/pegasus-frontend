@@ -19,6 +19,7 @@ private:
     void parseAvailableNetworks();
     void runCommand(const QString &command, QStringList &output);
     QStringList availableNetworks;
+    static int unused_val;
 };
 
 #endif // NETWORKMANAGER_H

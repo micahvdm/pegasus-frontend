@@ -36,7 +36,8 @@
 Q_IMPORT_PLUGIN(ApngImagePlugin)
 #endif
 
-qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
+int NetworkManager::unused_val = qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
+//qmlRegisterType<NetworkManager>("NetworkManager", 1, 0, "NetworkManager");
 
 backend::CliArgs handle_cli_args(QGuiApplication&);
 bool request_runtime_permissions();
