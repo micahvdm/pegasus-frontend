@@ -9,3 +9,10 @@ RESOURCES += \
     ./frontend.qrc \
     ../qmlutils/qmlutils.qrc \
     ../themes/themes.qrc
+
+SOURCES += \
+    ./connectivity/networkmanagerbackend.cpp
+
+HEADERS += \
+    ./connectivity/networkmanagerbackend.h
+
