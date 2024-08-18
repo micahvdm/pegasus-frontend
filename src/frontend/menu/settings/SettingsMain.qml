@@ -26,7 +26,7 @@ FocusScope {
     id: root
 
     signal close
-    signal openWifi
+    signal openWifiSettings
     signal openKeySettings
     signal openGamepadSettings
     signal openGameDirSettings
@@ -101,7 +101,7 @@ FocusScope {
         SettingsEntry {
             label: QT_TR_NOOP("WiFi Settings")
             type: SettingsEntry.Type.Button
-            buttonAction: root.openWifi
+            buttonAction: root.openWifiSettings
             section: "general"
         },
 
