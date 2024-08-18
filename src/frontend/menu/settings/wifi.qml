@@ -144,7 +144,7 @@ ApplicationWindow {
             return
         }
 
-        var connection = NM.SettingsConnection {
+        var connection = NM.SettingsConnection; {
             id: ssid
             uuid: Qt.createUuid()
             type: "802-11-wireless"
