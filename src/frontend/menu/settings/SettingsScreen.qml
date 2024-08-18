@@ -47,6 +47,7 @@ FocusScope {
         anchors.right: parent.right
 
         onClose: root.close()
+        onOpenWifiSettings: root.openScreen("wifi.qml")
         onOpenKeySettings: root.openScreen("KeyEditor.qml")
         onOpenGamepadSettings: root.openScreen("GamepadEditor.qml")
         onOpenGameDirSettings: root.openModal("GameDirEditor.qml")

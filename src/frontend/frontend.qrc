@@ -82,5 +82,6 @@
         <file>menu/settings/gamedireditor/GameDirEditorEntry.qml</file>
         <file>menu/settings/AndroidSafEditor.qml</file>
         <file>menu/settings/common/SimpleShade.qml</file>
+        <file>menu/settings/wifi.qml</file>
     </qresource>
 </RCC>

@@ -26,6 +26,7 @@ FocusScope {
     id: root
 
     signal close
+    signal openWifi
     signal openKeySettings
     signal openGamepadSettings
     signal openGameDirSettings
@@ -97,15 +98,21 @@ FocusScope {
             }
             section: "general"
         },
+        SettingsEntry {
+            label: QT_TR_NOOP("WiFi Settings")
+            type: SettingsEntry.Type.Button
+            buttonAction: root.openWifi
+            section: "general"
+        },
 
         SettingsEntry {
-            label: QT_TR_NOOP("Change controls...")
+            label: QT_TR_NOOP("Change controls")
             type: SettingsEntry.Type.Button
             buttonAction: root.openKeySettings
             section: "controls"
         },
         SettingsEntry {
-            label: QT_TR_NOOP("Change gamepad layout...")
+            label: QT_TR_NOOP("Change gamepad layout")
             type: SettingsEntry.Type.Button
             buttonAction: root.openGamepadSettings
             section: "controls"
@@ -120,13 +127,13 @@ FocusScope {
         },
 
         SettingsEntry {
-            label: QT_TR_NOOP("Set game directories...")
+            label: QT_TR_NOOP("Set game directories")
             type: SettingsEntry.Type.Button
             buttonAction: root.openGameDirSettings
             section: "gaming"
         },
         SettingsEntry {
-            label: QT_TR_NOOP("Accessible Android directories...")
+            label: QT_TR_NOOP("Accessible Android directories")
             type: SettingsEntry.Type.Button
             buttonAction: root.openAndroidSafSettings
             section: "gaming"
@@ -141,7 +148,7 @@ FocusScope {
             section: "gaming"
         },
         SettingsEntry {
-            label: QT_TR_NOOP("Enable/disable data sources...")
+            label: QT_TR_NOOP("Enable/disable data sources")
             type: SettingsEntry.Type.Button
             buttonAction: root.openProviderSettings
             section: "gaming"

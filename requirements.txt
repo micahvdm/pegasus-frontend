@@ -1,0 +1,2 @@
+sudo apt-get install qtvirtualkeyboard-plugin
+sudo apt-get install libnm-dev network-manager-qt qml-module-qtquick-controls2

@@ -1,6 +1,6 @@
 TEMPLATE = lib
 
-QT += qml quick
+QT += qml quick networkmanager bluetooth
 CONFIG += c++11 staticlib warn_on exceptions_off rtti_off qtquickcompiler
 DEFINES *= $${COMMON_DEFINES}
 
