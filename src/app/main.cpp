@@ -43,6 +43,7 @@ bool portable_txt_present();
 int main(int argc, char *argv[])
 {
     Q_INIT_RESOURCE(frontend);
+    Q_INIT_RESOURCE(NetworkManager);
     Q_INIT_RESOURCE(themes);
     Q_INIT_RESOURCE(qmlutils);
 #ifdef PEGASUS_USING_CMAKE  // TODO: Unify the build system

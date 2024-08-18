@@ -6,4 +6,4 @@ SUBDIRS += \
     frontend \
     NetworkManager
 
-app.depends = backend frontend NetworkManager
+app.depends = backend frontend
